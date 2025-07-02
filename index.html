@@ -21,6 +21,7 @@
             --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
             --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.15);
             --gradient: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            --card-gradient: linear-gradient(135deg, #f8f9fa 0%, #e8f0fe 100%);
         }
         
         * {
@@ -36,6 +37,7 @@
             line-height: 1.7;
             overflow-x: hidden;
             scroll-behavior: smooth;
+            font-size: 1.05rem; /* زيادة حجم الخط العام */
         }
         
         .container {
@@ -92,14 +94,14 @@
         }
         
         .logo-text h1 {
-            font-size: 1.8rem;
+            font-size: 1.9rem; /* زيادة حجم الشعار */
             font-weight: 900;
             margin-bottom: 5px;
             letter-spacing: -0.5px;
         }
         
         .logo-text p {
-            font-size: 0.9rem;
+            font-size: 1rem; /* زيادة حجم النص الفرعي */
             opacity: 0.9;
             font-weight: 300;
         }
@@ -114,7 +116,7 @@
             color: white;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 1.15rem; /* زيادة حجم الروابط */
             transition: var(--transition);
             padding: 8px 12px;
             border-radius: 30px;
@@ -156,7 +158,7 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            font-size: 1rem;
+            font-size: 1.1rem; /* زيادة حجم نص الأزرار */
             border: none;
             gap: 10px;
             box-shadow: var(--shadow);
@@ -174,13 +176,13 @@
         }
         
         .btn-secondary {
-            background-color: transparent;
+            background-color: rgba(255, 255, 255, 0.15);
             color: white;
-            border: 2px solid rgba(255, 255, 255, 0.4);
+            border: 2px solid rgba(255, 255, 255, 0.3);
         }
         
         .btn-secondary:hover {
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: rgba(255, 255, 255, 0.25);
             transform: translateY(-5px);
             box-shadow: var(--shadow-hover);
             border-color: white;
@@ -216,7 +218,7 @@
         }
         
         .hero h1 {
-            font-size: 3.8rem;
+            font-size: 4rem; /* زيادة حجم العنوان الرئيسي */
             margin-bottom: 25px;
             font-weight: 900;
             line-height: 1.2;
@@ -224,7 +226,7 @@
         }
         
         .hero p {
-            font-size: 1.5rem;
+            font-size: 1.6rem; /* زيادة حجم النص الفرعي */
             margin-bottom: 50px;
             opacity: 0.9;
             max-width: 700px;
@@ -250,23 +252,31 @@
         
         .stat-box {
             text-align: center;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(10px);
             padding: 25px 35px;
             border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.25);
             min-width: 200px;
+            transition: var(--transition);
+        }
+        
+        .stat-box:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
         }
         
         .stat-value {
-            font-size: 2.8rem;
+            font-size: 3rem; /* زيادة حجم الأرقام */
             font-weight: 800;
             margin-bottom: 10px;
             color: var(--accent);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
         
         .stat-label {
-            font-size: 1.1rem;
+            font-size: 1.2rem; /* زيادة حجم التصنيفات */
             font-weight: 500;
         }
         
@@ -283,7 +293,7 @@
         }
         
         .section-title h2 {
-            font-size: 2.8rem;
+            font-size: 3rem; /* زيادة حجم العناوين */
             color: var(--primary);
             margin-bottom: 20px;
             position: relative;
@@ -305,7 +315,7 @@
         
         .section-title p {
             color: var(--gray);
-            font-size: 1.3rem;
+            font-size: 1.4rem; /* زيادة حجم النص */
             max-width: 700px;
             margin: 30px auto 0;
             line-height: 1.8;
@@ -313,7 +323,7 @@
         
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); /* زيادة حجم البطاقات */
             gap: 40px;
             margin-top: 50px;
         }
@@ -360,6 +370,7 @@
             font-size: 5rem;
             position: relative;
             overflow: hidden;
+            background: var(--card-gradient); /* خلفية جديدة للتمييز */
         }
         
         .service-icon::after {
@@ -385,7 +396,7 @@
         }
         
         .service-content h3 {
-            font-size: 1.7rem;
+            font-size: 1.8rem; /* زيادة حجم العناوين الفرعية */
             margin-bottom: 20px;
             color: var(--primary);
             font-weight: 800;
@@ -395,6 +406,21 @@
             color: var(--gray);
             margin-bottom: 25px;
             line-height: 1.8;
+            font-size: 1.15rem; /* زيادة حجم النص */
+        }
+        
+        /* إصلاح مشكلة لون الأزرار في بطاقات الخدمات */
+        .service-content .btn-secondary {
+            background: rgba(26, 115, 232, 0.1);
+            color: var(--primary);
+            border: 2px solid rgba(26, 115, 232, 0.3);
+            font-weight: 600;
+        }
+        
+        .service-content .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
         }
         
         /* About Section */
@@ -442,7 +468,7 @@
         }
         
         .about-content h2 {
-            font-size: 2.8rem;
+            font-size: 3rem; /* زيادة حجم العنوان */
             color: var(--primary);
             margin-bottom: 30px;
             font-weight: 900;
@@ -450,7 +476,7 @@
         }
         
         .about-content p {
-            font-size: 1.2rem;
+            font-size: 1.25rem; /* زيادة حجم النص */
             color: var(--gray);
             margin-bottom: 30px;
             line-height: 1.9;
@@ -466,8 +492,8 @@
         }
         
         .doctor-avatar {
-            width: 280px;
-            height: 280px;
+            width: 300px; /* زيادة حجم الصورة */
+            height: 300px;
             border-radius: 50%;
             background: var(--gradient);
             display: flex;
@@ -481,7 +507,7 @@
         }
         
         .doctor-avatar i {
-            font-size: 10rem;
+            font-size: 11rem; /* زيادة حجم الأيقونة */
             color: white;
             opacity: 0.8;
         }
@@ -504,14 +530,14 @@
         }
         
         .doctor-info h3 {
-            font-size: 2rem;
+            font-size: 2.2rem; /* زيادة حجم الاسم */
             color: var(--primary);
             margin-bottom: 15px;
         }
         
         .doctor-info p {
             color: var(--gray);
-            font-size: 1.1rem;
+            font-size: 1.15rem; /* زيادة حجم التصنيف */
             max-width: 400px;
         }
         
@@ -545,13 +571,13 @@
         }
         
         .qualification h4 {
-            font-size: 1.2rem;
+            font-size: 1.25rem; /* زيادة حجم العناوين */
             margin-bottom: 10px;
             color: var(--dark);
         }
         
         .qualification p {
-            font-size: 1rem;
+            font-size: 1.05rem; /* زيادة حجم النص */
             color: var(--gray);
         }
         
@@ -577,7 +603,7 @@
         
         .results-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); /* زيادة حجم البطاقات */
             gap: 40px;
         }
         
@@ -623,7 +649,7 @@
         }
         
         .result-content h3 {
-            font-size: 1.6rem;
+            font-size: 1.7rem; /* زيادة حجم العناوين */
             margin-bottom: 15px;
             color: var(--primary);
             font-weight: 800;
@@ -633,6 +659,7 @@
             color: var(--gray);
             margin-bottom: 25px;
             line-height: 1.8;
+            font-size: 1.15rem; /* زيادة حجم النص */
         }
         
         .result-stats {
@@ -649,14 +676,14 @@
         }
         
         .stat-value {
-            font-size: 2rem;
+            font-size: 2.2rem; /* زيادة حجم الأرقام */
             font-weight: 800;
             color: var(--primary);
             line-height: 1;
         }
         
         .stat-label {
-            font-size: 1rem;
+            font-size: 1.1rem; /* زيادة حجم التصنيفات */
             color: var(--gray);
             margin-top: 8px;
         }
@@ -692,7 +719,7 @@
         
         .testimonials-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); /* زيادة حجم البطاقات */
             gap: 30px;
             margin-top: 50px;
             position: relative;
@@ -721,8 +748,8 @@
         }
         
         .testimonial-avatar {
-            width: 70px;
-            height: 70px;
+            width: 75px; /* زيادة حجم الصورة */
+            height: 75px;
             border-radius: 50%;
             background: var(--accent);
             display: flex;
@@ -735,20 +762,20 @@
         }
         
         .testimonial-info h4 {
-            font-size: 1.4rem;
+            font-size: 1.5rem; /* زيادة حجم الاسم */
             margin-bottom: 5px;
         }
         
         .testimonial-info p {
             opacity: 0.8;
-            font-size: 1rem;
+            font-size: 1.1rem; /* زيادة حجم التصنيف */
         }
         
         .testimonial-content {
             line-height: 1.9;
             margin-bottom: 25px;
             font-style: italic;
-            font-size: 1.1rem;
+            font-size: 1.15rem; /* زيادة حجم النص */
             position: relative;
             padding-right: 30px;
         }
@@ -766,7 +793,7 @@
         
         .testimonial-rating {
             color: var(--accent);
-            font-size: 1.3rem;
+            font-size: 1.4rem; /* زيادة حجم التقييم */
         }
         
         /* Appointment Section */
@@ -805,7 +832,7 @@
         }
         
         .appointment-form h2 {
-            font-size: 2.3rem;
+            font-size: 2.5rem; /* زيادة حجم العنوان */
             color: var(--primary);
             margin-bottom: 35px;
             text-align: center;
@@ -821,7 +848,7 @@
             margin-bottom: 10px;
             font-weight: 600;
             color: var(--dark);
-            font-size: 1.1rem;
+            font-size: 1.15rem; /* زيادة حجم النص */
         }
         
         .form-control {
@@ -830,7 +857,7 @@
             border: 1px solid var(--light-gray);
             border-radius: 12px;
             font-family: 'Tajawal', sans-serif;
-            font-size: 1.1rem;
+            font-size: 1.15rem; /* زيادة حجم النص */
             transition: var(--transition);
             background: #f9fafb;
         }
@@ -856,7 +883,7 @@
         }
         
         .appointment-info h3 {
-            font-size: 2rem;
+            font-size: 2.2rem; /* زيادة حجم العنوان */
             color: var(--primary);
             margin-bottom: 30px;
             font-weight: 800;
@@ -871,11 +898,17 @@
             background: rgba(255, 255, 255, 0.7);
             border-radius: 15px;
             text-align: right;
+            transition: var(--transition);
+        }
+        
+        .info-item:hover {
+            transform: translateX(-10px);
+            background: rgba(255, 255, 255, 0.9);
         }
         
         .info-icon {
-            width: 50px;
-            height: 50px;
+            width: 55px; /* زيادة حجم الأيقونات */
+            height: 55px;
             border-radius: 50%;
             background: var(--primary);
             color: white;
@@ -887,14 +920,14 @@
         }
         
         .info-content h4 {
-            font-size: 1.2rem;
+            font-size: 1.25rem; /* زيادة حجم العناوين */
             margin-bottom: 5px;
             color: var(--dark);
         }
         
         .info-content p {
             color: var(--gray);
-            font-size: 1.1rem;
+            font-size: 1.15rem; /* زيادة حجم النص */
         }
         
         /* FAQ Section */
@@ -923,7 +956,7 @@
         
         .faq-question {
             padding: 25px 30px;
-            font-size: 1.3rem;
+            font-size: 1.35rem; /* زيادة حجم الأسئلة */
             font-weight: 700;
             color: var(--primary);
             cursor: pointer;
@@ -939,6 +972,7 @@
             transition: var(--transition);
             color: var(--gray);
             line-height: 1.8;
+            font-size: 1.15rem; /* زيادة حجم الإجابات */
         }
         
         .faq-item.active .faq-answer {
@@ -947,14 +981,15 @@
         }
         
         .faq-toggle {
-            width: 30px;
-            height: 30px;
+            width: 35px; /* زيادة حجم الأيقونة */
+            height: 35px;
             border-radius: 50%;
             background: var(--light-gray);
             display: flex;
             align-items: center;
             justify-content: center;
             transition: var(--transition);
+            font-size: 1.1rem;
         }
         
         .faq-item.active .faq-toggle {
@@ -979,7 +1014,7 @@
         }
         
         .footer-col h3 {
-            font-size: 1.6rem;
+            font-size: 1.7rem; /* زيادة حجم العناوين */
             margin-bottom: 30px;
             position: relative;
             padding-bottom: 15px;
@@ -1001,6 +1036,7 @@
             color: #bdc1c6;
             margin-bottom: 25px;
             line-height: 1.8;
+            font-size: 1.1rem; /* زيادة حجم النص */
         }
         
         .footer-links {
@@ -1018,7 +1054,7 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            font-size: 1.1rem;
+            font-size: 1.15rem; /* زيادة حجم الروابط */
         }
         
         .footer-links a:hover {
@@ -1037,8 +1073,8 @@
         }
         
         .social-links a {
-            width: 45px;
-            height: 45px;
+            width: 50px; /* زيادة حجم الأيقونات */
+            height: 50px;
             border-radius: 50%;
             background: rgba(255, 255, 255, 0.1);
             display: flex;
@@ -1046,7 +1082,7 @@
             justify-content: center;
             color: white;
             transition: var(--transition);
-            font-size: 1.2rem;
+            font-size: 1.3rem;
         }
         
         .social-links a:hover {
@@ -1059,7 +1095,7 @@
             padding-top: 40px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: #bdc1c6;
-            font-size: 1rem;
+            font-size: 1.1rem; /* زيادة حجم النص */
         }
         
         /* Scroll to top button */
@@ -1067,15 +1103,15 @@
             position: fixed;
             bottom: 30px;
             left: 30px;
-            width: 50px;
-            height: 50px;
+            width: 55px; /* زيادة حجم الزر */
+            height: 55px;
             border-radius: 50%;
             background: var(--gradient);
             color: white;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1.7rem;
             cursor: pointer;
             z-index: 999;
             opacity: 0;
@@ -1103,13 +1139,13 @@
         /* Responsive Design */
         @media (max-width: 1200px) {
             .hero h1 {
-                font-size: 3.2rem;
+                font-size: 3.5rem;
             }
         }
         
         @media (max-width: 992px) {
             .hero h1 {
-                font-size: 2.8rem;
+                font-size: 3rem;
             }
             
             .appointment-container {
@@ -1127,15 +1163,15 @@
             }
             
             .hero h1 {
-                font-size: 2.4rem;
+                font-size: 2.6rem;
             }
             
             .hero p {
-                font-size: 1.2rem;
+                font-size: 1.3rem;
             }
             
             .section-title h2 {
-                font-size: 2.2rem;
+                font-size: 2.5rem;
             }
             
             .header-buttons {
@@ -1151,11 +1187,15 @@
                 width: 100%;
                 max-width: 300px;
             }
+            
+            .services-grid, .testimonials-grid, .results-container {
+                grid-template-columns: 1fr;
+            }
         }
         
         @media (max-width: 576px) {
             .hero h1 {
-                font-size: 2rem;
+                font-size: 2.3rem;
             }
             
             .stat-box {
@@ -1164,12 +1204,17 @@
             }
             
             .stat-value {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
             
             .appointment-form,
             .appointment-info {
                 padding: 30px 20px;
+            }
+            
+            .doctor-avatar {
+                width: 250px;
+                height: 250px;
             }
         }
     </style>
@@ -1734,7 +1779,7 @@
     <script>
         // Simple animation on scroll
         document.addEventListener('DOMContentLoaded', function() {
-            const elements = document.querySelectorAll('.service-card, .result-card, .testimonial-card, .qualification');
+            const elements = document.querySelectorAll('.service-card, .result-card, .testimonial-card, .qualification, .stat-box');
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
